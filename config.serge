@@ -166,18 +166,18 @@ jobs
         @inherit                                .#inc/common-job-settings
 
         name                                    Localize JavaScript files
-        id                                      js
+        id                                      json
 
         source_dir                              data/en
         source_process_subdirs                  YES
-        source_match                            \.js$
+        source_match                            \.json$
         output_file_path                        data/%LANG%/%FILE%
 
         use_keys_as_context                     YES
 
         parser
         {
-            plugin                              parse_js
+            plugin                              parse_json
         }
     }
 }
